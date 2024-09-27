@@ -16,13 +16,7 @@ $tab[4]=rand(0,99);
 
 function plusPetit($tab) {
     $min = $tab[0];
-    $tab = array('','','','','');
-
-$tab[0]=rand(0,99);
-$tab[1]=rand(0,99);
-$tab[2]=rand(0,99);
-$tab[3]=rand(0,99);
-$tab[4]=rand(0,99);
+    
     for ($indice = 1; $indice < count($tab); $indice++) {
         if ($tab[$indice] < $min) {
             $min = $tab[$indice];
@@ -48,9 +42,9 @@ $tab = creaTableau();
 echo "Tableau 3 : ";
 print_r("[$tab[0]],[$tab[1]],[$tab[2]],[$tab[3]],[$tab[4]]");
 echo "<br>";
-echo "Plus petit: " . plusPetit($tab) . "\n";
+echo "Le plus petit est : " . plusPetit($tab) . "\n";
 echo "<br>";
-echo "Plus grand: " . plusGrand($tab). "\n";
+echo "Le plus grand est : " . plusGrand($tab). "\n";
 echo "<br>";
 
 ?>

@@ -7,21 +7,14 @@ $tabetudiants = array(
     "Stephane" => array("anglais" => 14, "français" => 15, "math" => 18),
     "Coralie" => array("anglais" => 12, "français" => 19, "math" => 5)
 );
-
-
 foreach ($tabetudiants as $nommat => $notes) {
     $totalnotes = 0;
     $nbmat = count($notes);
-    
     foreach ($notes as $matiere => $note) {
         $totalnotes += $note;
     }
-    
     $moyenne = $totalnotes / $nbmat;
-    
-   
     if ($moyenne >= 10) {
-
         echo "{$nommat} a obtenu l'examen avec une moyenne de " . number_format($moyenne, 2) . "\n";
         echo "<br>";
     }

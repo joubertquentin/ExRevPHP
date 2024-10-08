@@ -1,20 +1,26 @@
 <?php
+$tab = [];
 
-$tab = array('','','','','');
-
-$tab[0]=rand(0,99);
-$tab[1]=rand(0,99);
-$tab[2]=rand(0,99);
-$tab[3]=rand(0,99);
-$tab[4]=rand(0,99);
-
-echo "Tableau 2 : ";
-print_r("[$tab[0]],[$tab[1]],[$tab[2]],[$tab[3]],[$tab[4]]");
+for ($i=1;$i<=5;$i++){
+    $tab[] = rand(0,99);
+}
+var_dump($tab);
+$max=-1;
+$min=100;
+for ($i=0; $i<5; $i++)
+{
+	if ($tab[$i] > $max)
+	{
+		$max = $tab[$i];
+	}
+	if ($tab[$i] < $min)
+	{
+		$min = $tab[$i];
+	}
+}
 echo "<br>";
-echo "Le plus grand nombre est : ";
-echo max($tab);
+echo "Le plus grand nombre est : ".$max;
 echo "<br>";
-echo "Le plus petit est : ";
-echo min($tab);
+echo "Le plus petit est : ".$min;
 
 ?>

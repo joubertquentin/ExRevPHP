@@ -1,17 +1,11 @@
 <?php
+$tab = [];
 
-
-function creatableau() {
-$tab = array('','','','','');
-
-$tab[0]=rand(0,99);
-$tab[1]=rand(0,99);
-$tab[2]=rand(0,99);
-$tab[3]=rand(0,99);
-$tab[4]=rand(0,99);
-
-return $tab;
+for ($i=1; $i<=5; $i++)
+{
+	$tab[] = rand(0,99);
 }
+
 
 
 function plusPetit($tab) {
@@ -35,10 +29,7 @@ function plusGrand($tab) {
     return $max;
 }
 
-$tab = creaTableau();
-
-echo "Tableau 3 : ";
-print_r("[$tab[0]],[$tab[1]],[$tab[2]],[$tab[3]],[$tab[4]]");
+var_dump($tab);
 echo "<br>";
 echo "Le plus petit est : " . plusPetit($tab) . "\n";
 echo "<br>";

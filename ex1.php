@@ -1,13 +1,8 @@
 <?php
-$tab = array('','','','','');
+$tab = [];
 
-$tab[0]=rand(0,99);
-$tab[1]=rand(0,99);
-$tab[2]=rand(0,99);
-$tab[3]=rand(0,99);
-$tab[4]=rand(0,99);
-
-echo "Tableau 1 : ";
-print_r("[$tab[0]],[$tab[1]],[$tab[2]],[$tab[3]],[$tab[4]]")
-
+for ($i=1;$i<=5;$i++){
+    $tab[] = rand(0,99);
+}
+var_dump($tab);
 ?>
